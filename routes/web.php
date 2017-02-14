@@ -10,9 +10,15 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::get('signup','PagesController@getSignup');
+Route::get('dash','PagesController@getDash');
 Route::get('contact','PagesController@getContact');
 
 Route::get('about','PagesController@getAbout');
 
 Route::get('/', 'PagesController@getIndex');
 
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index');
