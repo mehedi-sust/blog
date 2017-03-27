@@ -26,7 +26,11 @@ class SignController extends Controller
     public function create()
     {
         //
-        return view('pages.signup');
+    }
+
+    public function __construct()
+    {
+        $this->middleware('auth');
     }
 
     /**

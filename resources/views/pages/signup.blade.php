@@ -45,7 +45,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
         
         <!-- modal -->
             <div class="login-modal login"> 
-                <form action="" method="post">
+                <form class="form-horizontal" role="form" method="POST" action="{{ route('login') }}">
                     <input type="text" placeholder="Your Name" name="name" required="">
                     <input type="text" placeholder="2012*****" name="reg" required="">
                     <input type="text" placeholder="example@gmail.com" name="mail" required="">

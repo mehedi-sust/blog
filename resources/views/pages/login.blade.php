@@ -41,9 +41,10 @@ License URL: http://creativecommons.org/licenses/by/3.0/
         <div class="w3agile-border">
             <div class="login-main login-agileits"> 
                 <h1>Mess Finder Login</h1> 
-                <form action="#" method="post">
+                <form class="form-horizontal" role="form" method="POST" action="{{ route('login') }}">
+                {{ csrf_field() }}
                     <p>Registration No.</p>
-                    <input type="text" placeholder="2012******" name="mail" required="">
+                    <input type="text" placeholder="2012******" name="reg" value="{{ old('email') }}" required="">
                     <p>Password</p>
                     <input type="password" placeholder="Password" name="Password" required="">
                     <input type="submit" value="Login">
@@ -52,22 +53,11 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                     
                     <!--<a class="g" href="#">Google</a> -->
                 </div>
-                <h3>Not a member yet ? <a href="#small-dialog" class="sign-in popup-top-anim"> Sign Up Now !</a> <br> Or <br> <a href="home"> visit as a guest !</a> </h3>
+                <h3>Not a member yet ? <a href={{url('signup')}}> Sign Up Now !</a> <br> Or <br> <a href="home"> visit as a guest !</a> </h3>
             </div>
         </div>
         <!-- modal -->
-        <div id="small-dialog" class="mfp-hide">
-            <h5 class="w3ls-title">Sign Up</h5>
-            <div class="login-modal login"> 
-                <form action="#" method="post">
-                    <input type="text" placeholder="Your Name" name="name" required="">
-                    <input type="text" placeholder="2012*****" name="reg" required="">
-                    <input type="text" placeholder="example@gmail.com" name="mail" required="">
-                    <input type="text" placeholder="Your Department" name="mail" required="">
-                    <input type="password" placeholder="Password" name="Password" required="">
-                    <input type="submit" value="Sign Up">
-                </form>
-            </div> 
+        
         </div>
         <!-- //modal -->  
     </div>

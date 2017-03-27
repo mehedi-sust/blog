@@ -28,6 +28,10 @@ class PagesController extends Controller{
 		return view('pages/signup');
 	}
 
+	public function test(){
+		return view('test');
+	}
+
 }
 
 ?>
